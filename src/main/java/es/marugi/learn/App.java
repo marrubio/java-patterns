@@ -1,12 +1,6 @@
 package es.marugi.learn;
 
 
-import es.marugi.learn.patterns.singleton.Singleton;
-
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -14,8 +8,15 @@ public class App
 
         //Singleton pattern
         System.out.println("Singleton pattern");
-        Singleton singleton = Singleton.getInstance();
+        es.marugi.learn.patterns.singleton.Singleton singleton = es.marugi.learn.patterns.singleton.Singleton.getInstance();
         System.out.println("Name: " + singleton.getName());
         System.out.println("Version: " + singleton.getVersion());
+
+        //prototype
+        System.out.println("\nPrototype pattern");
+        es.marugi.learn.patterns.prototype.Application prototype = new es.marugi.learn.patterns.prototype.Application();
+        prototype.businessLogic();
+
+
     }
 }
